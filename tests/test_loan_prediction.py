@@ -4,7 +4,7 @@ from flask import Flask, render_template, request, jsonify
 import joblib
 
 # Add your app code import here
-sys.path.append("..")  # Adjust the path to your app code
+sys.path.append("./")  # Adjust the path to your app code
 from app import app  # Assuming your Flask app instance is named 'app'
 
 # Load the loan prediction model
@@ -36,7 +36,7 @@ def test_predict(client):
         "credit_history": 1,
     }
 
-    response = client.post("/predict", data=data)
+    response = client.post("/", data=data)
     assert response.status_code == 200
     assert b"Prediction Results:" in response.data
     assert b"Predicted Probability:" in response.data
