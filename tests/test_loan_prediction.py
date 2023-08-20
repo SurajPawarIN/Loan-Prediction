@@ -5,7 +5,7 @@ import joblib
 
 # Add your app code import here
 sys.path.append("./")  # Adjust the path to your app code
-from .. import app  # Assuming your Flask app instance is named 'app'
+from app import app  # Assuming your Flask app instance is named 'app'
 
 # Load the loan prediction model
 model = joblib.load("loan_prediction_model.pkl")
