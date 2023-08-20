@@ -9,8 +9,8 @@
 
 Create a new Environment 
 
-'''
+```
 conda create -n Loan_pred python==3.11.2 -y
-'''
+```
 
 
